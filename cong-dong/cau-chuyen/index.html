@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Câu chuyện thành công | Cộng đồng AI VIDEO AFFILIATE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0b0a;--bg2:#141210;--bg3:#1c1917;
+  --cream:#e7e3dd;--cream-bg:#f5f2ed;
+  --brown:#7A5C2E;--gold:#c9a84c;--gold-soft:rgba(201,168,76,0.1);
+  --green:#27AE60;
+  --ink:#1C1C1C;--text-sub:#6B6B6B;
+  --white:#fff;--text:#a8a29e;--text2:#78716c;
+  --border:rgba(0,0,0,0.08);--border-dark:rgba(231,227,221,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream-bg);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--white);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:40px;height:40px;background:var(--brown);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:24px;height:24px}
+.logo-text{font-size:13px;font-weight:700;line-height:1.2;letter-spacing:1px;text-transform:uppercase;color:var(--ink)}
+.logo-text span{color:var(--brown)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-sub);transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--brown)}
+.nav-login{background:var(--ink);color:var(--white);padding:10px 24px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:all .3s}
+.nav-login:hover{background:var(--brown)}
+@media(max-width:768px){.nav-links{display:none}.nav-inner{padding:12px 20px}}
+
+.page-hero{padding:130px 32px 60px;text-align:center}
+.hero-label{font-size:12px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--brown);margin-bottom:16px}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,48px);font-weight:900;line-height:1.12;color:var(--ink);margin-bottom:16px}
+.page-hero h1 em{font-style:italic;color:var(--brown);font-weight:400}
+.page-hero p{font-size:17px;color:var(--text-sub);max-width:540px;margin:0 auto}
+
+/* FEATURED */
+.featured{padding:0 32px 80px;max-width:1100px;margin:0 auto}
+.featured-card{display:grid;grid-template-columns:1fr 1fr;background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+@media(max-width:800px){.featured-card{grid-template-columns:1fr}}
+.featured-img{min-height:400px;background:var(--bg3);position:relative;overflow:hidden}
+.featured-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.featured-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1510,#2a2018);position:absolute;inset:0}
+.featured-img-placeholder .fip-num{font-family:'Playfair Display',serif;font-size:80px;font-weight:900;color:var(--gold);line-height:1}
+.featured-img-placeholder .fip-label{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--text);margin-top:8px}
+.featured-content{padding:48px 36px;display:flex;flex-direction:column;justify-content:center}
+.featured-tag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);background:var(--gold-soft);display:inline-block;padding:4px 12px;border-radius:100px;margin-bottom:16px;width:fit-content}
+.featured-content h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;line-height:1.3;margin-bottom:16px}
+.featured-content p{font-size:15px;color:var(--text-sub);line-height:1.75}
+.featured-name{font-size:15px;font-weight:700;color:var(--brown);margin-top:20px}
+.featured-role{font-size:13px;color:var(--text-sub)}
+
+/* STORY CARDS - large photo */
+.stories-section{padding:80px 32px;max-width:1100px;margin:0 auto}
+.stories-label{font-size:12px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--brown);margin-bottom:12px}
+.stories-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,36px);font-weight:900;margin-bottom:40px}
+
+.story-card{display:grid;grid-template-columns:1fr 1fr;background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px;transition:all .3s}
+.story-card:hover{box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.story-card:nth-child(even){direction:rtl}
+.story-card:nth-child(even)>*{direction:ltr}
+@media(max-width:800px){.story-card,.story-card:nth-child(even){grid-template-columns:1fr;direction:ltr}}
+
+.story-img{min-height:300px;background:var(--bg3);position:relative;overflow:hidden}
+.story-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.story-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1510,#2a2018);position:absolute;inset:0}
+.story-img-placeholder span{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;color:var(--brown);opacity:0.15}
+
+.story-body{padding:36px 32px;display:flex;flex-direction:column;justify-content:center}
+.story-phase{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brown);margin-bottom:12px}
+.story-before{font-size:14px;color:var(--text-sub);line-height:1.65;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--border)}
+.story-after{font-size:15px;color:var(--ink);line-height:1.7;margin-bottom:16px}
+.story-quote{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--brown);line-height:1.5;padding-left:16px;border-left:3px solid var(--brown);margin-bottom:20px}
+.story-name{font-size:15px;font-weight:700;color:var(--ink)}
+.story-role{font-size:13px;color:var(--text-sub)}
+
+/* STATS */
+.stats{padding:60px 32px;background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-inner{max-width:800px;margin:0 auto;display:flex;justify-content:center;gap:56px;flex-wrap:wrap;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:44px;font-weight:900;color:var(--brown)}
+.stat-label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--text-sub);margin-top:4px}
+
+/* INSIGHTS */
+.insights{padding:80px 32px;background:var(--ink);color:var(--cream)}
+.insights-inner{max-width:900px;margin:0 auto}
+.insights-label{font-size:12px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.insights-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,32px);font-weight:900;margin-bottom:36px}
+.insights-list{list-style:none}
+.insights-list li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border-dark);font-size:15px;line-height:1.65;color:var(--cream)}
+.insights-list li:last-child{border-bottom:none}
+.ins-check{color:var(--green);flex-shrink:0;font-weight:700;font-size:16px;margin-top:1px}
+
+/* CTA */
+.cta-bottom{padding:100px 32px;text-align:center;background:var(--cream-bg)}
+.cta-bottom h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:var(--ink);margin-bottom:12px}
+.cta-bottom p{font-size:16px;color:var(--text-sub);max-width:440px;margin:0 auto 36px}
+.btn-primary{background:var(--brown);color:var(--white);padding:15px 36px;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:all .3s;display:inline-block;border-radius:4px}
+.btn-primary:hover{background:var(--ink)}
+
+/* FOOTER */
+.footer{padding:60px 32px 40px;background:var(--white);border-top:1px solid var(--border)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:40px}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr}}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.footer-desc{font-size:13px;color:var(--text-sub);line-height:1.6}
+.footer-col h4{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
+.footer-col a{display:block;font-size:14px;color:var(--text-sub);padding:4px 0;transition:color .3s}
+.footer-col a:hover{color:var(--brown)}
+.footer-newsletter{display:flex;gap:0;margin-top:8px}
+.footer-email{flex:1;padding:10px 14px;border:1px solid var(--border);border-right:none;font-family:'DM Sans',sans-serif;font-size:13px;background:var(--cream-bg);color:var(--ink)}
+.footer-email::placeholder{color:var(--text-sub)}
+.footer-send{padding:10px 16px;background:var(--brown);color:var(--white);border:none;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
+.footer-send:hover{background:var(--ink)}
+.footer-bottom{max-width:1200px;margin:32px auto 0;padding-top:20px;border-top:1px solid var(--border);font-size:12px;color:var(--text-sub);text-align:center}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.vis{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/cong-dong/" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z" stroke="#e7e3dd" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="#e7e3dd" opacity="0.6"/></svg></div>
+      <div class="logo-text">Cộng đồng<br><span>AI Video Affiliate</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="/cong-dong/">Trang chủ</a>
+      <a href="/cong-dong/bang-xep-hang/">Bảng xếp hạng</a>
+      <a href="/cong-dong/cau-chuyen/" class="active">Câu chuyện thành công</a>
+      <a href="#cta" class="nav-login">Đăng ký</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero reveal">
+  <div class="hero-label">Câu chuyện thành công</div>
+  <h1>Người thật. <em>Kết quả thật.</em></h1>
+  <p>Không phải người giỏi sẵn. Đây là mẹ bỉm sữa, nhân viên kỹ thuật, người chưa bao giờ dùng máy tính — nhưng đã làm được nhờ đi đúng hệ thống.</p>
+</div>
+
+<!-- ===== FEATURED STORY ===== -->
+<div class="featured reveal">
+  <div class="featured-card">
+    <div class="featured-img">
+      <!-- THAY ẢNH: đổi src thành link ảnh Thương -->
+      <!-- Ví dụ: <img src="https://drive.google.com/thumbnail?id=ABC123&sz=w800" alt="Thương"> -->
+      <div class="featured-img-placeholder">
+        <div class="fip-num">17</div>
+        <div class="fip-label">Video lên xu hướng</div>
+      </div>
+    </div>
+    <div class="featured-content">
+      <div class="featured-tag">Câu chuyện nổi bật</div>
+      <h3>Từ chưa bao giờ dùng máy tính đến 17 video lên xu hướng</h3>
+      <p>Thương chưa bao giờ sử dụng máy tính, không biết các công cụ AI. Tham gia qua lời giới thiệu của bạn. Mày mò từng bước, đưa trải nghiệm cuộc sống gia đình lên video — đạt 17 video lên xu hướng, cao nhất khóa K003.</p>
+      <div class="featured-name">Thương</div>
+      <div class="featured-role">Mẹ bỉm sữa · K003 · Cao nhất khóa</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ALL STORIES ===== -->
+<section class="stories-section">
+
+  <div class="stories-label reveal">Tất cả câu chuyện</div>
+  <div class="stories-title reveal">Mỗi người một hoàn cảnh, cùng một kết quả</div>
+
+  <!-- ========== STORY 1: DUYÊN ========== -->
+  <div class="story-card reveal">
+    <div class="story-img">
+      <!-- THAY ẢNH: đổi src thành link ảnh Duyên -->
+      <div class="story-img-placeholder"><span>D</span></div>
+    </div>
+    <div class="story-body">
+      <div class="story-phase">Before → After</div>
+      <div class="story-before"><strong>Trước:</strong> Đã làm rất nhiều video trên fanpage nhưng chưa viral. Vào thử thách vẫn mang tư duy cũ, video không lên được.</div>
+      <div class="story-after"><strong>Bước ngoặt ngày thứ 6:</strong> Thay đổi tư duy — thay vì video dài thì tập trung vào video ngắn, chạm cảm xúc. Kết quả: 6 video triệu view.</div>
+      <div class="story-quote">"Mọi thứ xung quanh em đều là content."</div>
+      <div class="story-name">Duyên</div>
+      <div class="story-role">Mẹ bỉm sữa · K002 · 6 video triệu view</div>
+    </div>
+  </div>
+
+  <!-- ========== STORY 2: QUÝ ========== -->
+  <div class="story-card reveal">
+    <div class="story-img">
+      <!-- THAY ẢNH: đổi src thành link ảnh Quý -->
+      <div class="story-img-placeholder"><span>Q</span></div>
+    </div>
+    <div class="story-body">
+      <div class="story-phase">Before → After</div>
+      <div class="story-before"><strong>Trước:</strong> Biết bán hàng nhưng chưa bao giờ thử sức làm content. Lần 1 tham gia — không có video nào lên xu hướng.</div>
+      <div class="story-after"><strong>Lần 2 tham gia lại:</strong> Áp dụng đúng công thức → 2 video triệu view. Cứ đi rồi sẽ đến.</div>
+      <div class="story-quote">"Công thức có sẵn rồi, việc của mình là làm theo."</div>
+      <div class="story-name">Quý</div>
+      <div class="story-role">Nhà bán hàng Shopee · K003 · 2 video triệu view</div>
+    </div>
+  </div>
+
+  <!-- ========== STORY 3: NHUNG ========== -->
+  <div class="story-card reveal">
+    <div class="story-img">
+      <!-- THAY ẢNH: đổi src thành link ảnh Nhung -->
+      <div class="story-img-placeholder"><span>N</span></div>
+    </div>
+    <div class="story-body">
+      <div class="story-phase">Before → After</div>
+      <div class="story-before"><strong>Trước:</strong> Mẹ bầu, có thời gian nhưng chưa biết học gì, không giỏi công nghệ.</div>
+      <div class="story-after"><strong>Kết quả:</strong> Video triệu view đầu tiên + có tiền ngay trong thử thách.</div>
+      <div class="story-quote">"Làm theo hướng dẫn và sẵn sàng học hỏi từ các bạn khác trong thử thách."</div>
+      <div class="story-name">Nhung</div>
+      <div class="story-role">Mẹ bầu · K003 · Video triệu view</div>
+    </div>
+  </div>
+
+  <!-- ========== STORY 4: LÝ ========== -->
+  <div class="story-card reveal">
+    <div class="story-img">
+      <!-- THAY ẢNH: đổi src thành link ảnh Lý -->
+      <div class="story-img-placeholder"><span>L</span></div>
+    </div>
+    <div class="story-body">
+      <div class="story-phase">Before → After</div>
+      <div class="story-before"><strong>Trước:</strong> Khô khan, chưa từng bán một món hàng, chưa từng nói trước đám đông. Suýt bỏ cuộc vì video chỉ vài chục view.</div>
+      <div class="story-after"><strong>Được Mentor động viên:</strong> Tiếp tục làm → 7 video lên xu hướng ngay trong thử thách.</div>
+      <div class="story-quote">"Em tí nữa đã bỏ đi mất cơ hội của chính mình."</div>
+      <div class="story-name">Lý</div>
+      <div class="story-role">Kỹ thuật viên · K003 · 7 video xu hướng</div>
+    </div>
+  </div>
+
+  <!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║  THÊM NGƯỜI MỚI: Copy toàn bộ block bên dưới,          ║
+  ║  paste ngay trên dòng này, rồi sửa nội dung.           ║
+  ╚══════════════════════════════════════════════════════════╝
+
+  <div class="story-card reveal">
+    <div class="story-img">
+      <img src="LINK_ẢNH_Ở_ĐÂY" alt="TÊN">
+    </div>
+    <div class="story-body">
+      <div class="story-phase">Before → After</div>
+      <div class="story-before"><strong>Trước:</strong> MÔ TẢ TRƯỚC KHI THAM GIA</div>
+      <div class="story-after"><strong>Kết quả:</strong> MÔ TẢ KẾT QUẢ SAU THỬ THÁCH</div>
+      <div class="story-quote">"CÂU NÓI ẤN TƯỢNG CỦA HỌ"</div>
+      <div class="story-name">TÊN</div>
+      <div class="story-role">NGHỀ NGHIỆP · KHÓA · KẾT QUẢ</div>
+    </div>
+  </div>
+
+  -->
+
+</section>
+
+<!-- STATS -->
+<div class="stats reveal">
+  <div class="stats-inner">
+    <div><div class="stat-num">1.371</div><div class="stat-label">Video tạo ra</div></div>
+    <div><div class="stat-num">14</div><div class="stat-label">Video triệu view</div></div>
+    <div><div class="stat-num">67</div><div class="stat-label">Học viên K003</div></div>
+    <div><div class="stat-num">93%</div><div class="stat-label">Hoàn thành</div></div>
+  </div>
+</div>
+
+<!-- INSIGHTS -->
+<section class="insights reveal">
+  <div class="insights-inner">
+    <div class="insights-label">Điểm chung</div>
+    <div class="insights-title">5 điều giống nhau ở những người thành công</div>
+    <ul class="insights-list">
+      <li><span class="ins-check">✓</span>Không phải người giỏi sẵn — đều bắt đầu từ con số 0, không cần giỏi để bắt đầu</li>
+      <li><span class="ins-check">✓</span>Làm đều mỗi ngày — kỷ luật 21 ngày quan trọng hơn tài năng bẩm sinh</li>
+      <li><span class="ins-check">✓</span>Có Mentor đi cùng — những lúc muốn bỏ cuộc, Mentor là người kéo lại</li>
+      <li><span class="ins-check">✓</span>Thay đổi tư duy trước khi thay đổi kỹ thuật — hiểu tại sao video hay quan trọng hơn biết dùng tool</li>
+      <li><span class="ins-check">✓</span>Lấy trải nghiệm đời thường làm content — mọi thứ xung quanh đều là content, không cần nghĩ xa</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-bottom" id="cta">
+  <div class="reveal">
+    <h2>Câu chuyện tiếp theo có thể là của bạn.</h2>
+    <p>Duyên, Thương, Lý, Nhung — không ai nghĩ mình sẽ có video triệu view. Nhưng họ bắt đầu. Và bạn cũng có thể.</p>
+    <a href="https://m.me/your-page" class="btn-primary">Đăng ký thử thách</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <div class="logo-icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z" stroke="#e7e3dd" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="#e7e3dd" opacity="0.6"/></svg></div>
+        <div class="logo-text" style="font-size:11px">Cộng đồng<br><span>AI Video Affiliate</span></div>
+      </div>
+      <p class="footer-desc">Cộng đồng dành cho những người muốn xây kênh bán hàng bằng AI Video, tập trung vào nội dung chất lượng và thu nhập bền vững từ Affiliate.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Chương trình</h4>
+      <a href="/cong-dong/bang-xep-hang/">Bảng xếp hạng</a>
+      <a href="/cong-dong/cau-chuyen/">Câu chuyện thành công</a>
+      <a href="#cta">Đăng ký thử thách</a>
+    </div>
+    <div class="footer-col">
+      <h4>Liên kết</h4>
+      <a href="#">Facebook Group</a>
+      <a href="#">Skool Community</a>
+      <a href="#">Zalo</a>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <div class="footer-newsletter">
+        <input type="email" class="footer-email" placeholder="Email của bạn">
+        <button class="footer-send">Gửi</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Cộng đồng AI VIDEO AFFILIATE. Kiên định, nhẹ nhàng, không bỏ cuộc.</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis') }) }, { threshold: .08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
