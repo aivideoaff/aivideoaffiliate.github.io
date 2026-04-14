@@ -369,6 +369,14 @@ function getInitials(name) {
   return name[0].toUpperCase();
 }
 
+function reverseName(name) {
+  if (!name) return '';
+  const parts = name.trim().split(/\s+/);
+  if (parts.length <= 1) return name.toUpperCase();
+  const last = parts.pop();
+  return (last + ' ' + parts.join(' ')).toUpperCase();
+}
+
 function avatarHTML(url, name, size) {
   const thumb = driveThumb(url);
   const s = size || 36;
@@ -715,7 +723,7 @@ function renderDetailTable() {
   }).join('');
 
   let html = `<table class="data-table detail-table"><thead><tr>
-    <th class="sticky-col sticky-col-1">Thành viên</th><th class="sticky-col sticky-col-2">Nhóm</th><th class="sticky-col sticky-col-3">Tổng kết bài tập</th>${dayHeaders}
+    <th class="sticky-col sticky-col-1">Thành viên</th><th class="sticky-col sticky-col-2">Nhóm</th><th class="sticky-col sticky-col-3">Tổng kết</th>${dayHeaders}
   </tr></thead><tbody>`;
 
   data.forEach(r => {
@@ -740,7 +748,7 @@ function renderDetailTable() {
     const pctClass = pct >= 80 ? 'pct-high' : pct >= 50 ? 'pct-mid' : 'pct-low';
 
     html += `<tr>
-      <td class="sticky-col sticky-col-1"><div class="member-cell">${avatarHTML(avatar, name)}<div><div class="member-name">${name.toUpperCase()}</div><div class="member-skool">${skool}</div></div></div></td>
+      <td class="sticky-col sticky-col-1"><div class="member-cell">${avatarHTML(avatar, name)}<div><div class="member-name">${reverseName(name)}</div><div class="member-skool">${skool}</div></div></div></td>
       <td class="sticky-col sticky-col-2">${nhom}</td>
       <td class="sticky-col sticky-col-3"><span class="pct ${pctClass}">${pct}%</span></td>
       ${dayCells}
@@ -827,7 +835,7 @@ function renderRankTable() {
 
     html += `<tr>
       <td><div class="rank-badge ${rankClass}">#${String(rank).padStart(2,'0')}</div></td>
-      <td><div class="member-cell">${avatarHTML(avatar, name)}<div><div class="member-name">${name.toUpperCase()}</div><div class="member-skool">${skool}</div></div></div></td>
+      <td><div class="member-cell">${avatarHTML(avatar, name)}<div><div class="member-name">${reverseName(name)}</div><div class="member-skool">${skool}</div></div></div></td>
       <td><span class="pct ${viewClass}" style="font-size:16px">${formatView(view)}</span></td>
       <td>${khoa}</td>
       <td>${nhom}</td>
