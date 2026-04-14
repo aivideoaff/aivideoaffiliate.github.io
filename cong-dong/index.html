@@ -21,8 +21,6 @@
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--cream-bg);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-
-/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0;background:var(--white);border-bottom:1px solid var(--border);transition:all .3s}
 .nav-inner{max-width:1200px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:12px}
@@ -35,20 +33,16 @@ a{color:inherit;text-decoration:none}
 .nav-links a:hover,.nav-links a.active{color:var(--brown)}
 .nav-login{background:var(--ink);color:var(--white);padding:10px 24px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;transition:all .3s}
 .nav-login:hover{background:var(--brown)}
-@media(max-width:768px){.nav-links{display:none}.nav-inner{padding:12px 20px}}
-
-/* HERO - 2 columns light bg */
+@media(max-width:768px){.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(12,11,10,0.97);flex-direction:column;align-items:center;justify-content:center;gap:28px;z-index:300}.nav-links.open{display:flex}.nav-links a{font-size:16px;color:#e7e3dd}.nav-inner{padding:12px 20px}.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;z-index:301;padding:8px}.hamburger span{display:block;width:24px;height:2px;background:#1C1C1C;transition:all .3s}.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}}@media(min-width:769px){.hamburger{display:none}}
 .hero{padding:120px 32px 80px;background:var(--cream-bg)}
 .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:32px}}
-
 .hero-video{position:relative;border-radius:8px;overflow:hidden;background:var(--ink);aspect-ratio:16/9;box-shadow:0 8px 40px rgba(0,0,0,0.15)}
 .hero-video iframe{width:100%;height:100%;border:none}
 .video-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1510,#2a2520);cursor:pointer;position:relative}
 .play-btn{width:72px;height:72px;border:3px solid rgba(255,255,255,0.8);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;background:rgba(255,255,255,0.1);backdrop-filter:blur(4px)}
 .play-btn:hover{background:rgba(255,255,255,0.2);transform:scale(1.08)}
 .play-btn svg{width:28px;height:28px;margin-left:4px}
-
 .hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.1;color:var(--brown);margin-bottom:20px}
 .hero-content p{font-size:17px;color:var(--text-sub);line-height:1.7;margin-bottom:32px;max-width:480px}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
@@ -56,36 +50,24 @@ a{color:inherit;text-decoration:none}
 .btn-primary:hover{background:var(--ink)}
 .btn-outline{border:2px solid var(--brown);color:var(--brown);padding:13px 36px;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:all .3s;display:inline-block;border-radius:4px}
 .btn-outline:hover{background:var(--brown);color:var(--white)}
-
-/* BENEFITS - 3 cards */
 .benefits{padding:80px 32px;background:var(--cream-bg)}
 .benefits-inner{max-width:1100px;margin:0 auto}
 .benefits-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,36px);font-weight:900;color:var(--ink);margin-bottom:8px}
 .benefits-line{width:60px;height:3px;background:var(--brown);margin-bottom:48px}
-
 .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:800px){.benefits-grid{grid-template-columns:1fr}}
-
 .benefit-card{padding:36px 28px;background:var(--white);border:1px solid var(--border);border-radius:4px;transition:all .3s}
 .benefit-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06)}
 .benefit-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--brown);margin-bottom:20px;line-height:1.3}
-.benefit-card.card-2 h3{color:var(--brown)}
-.benefit-card.card-3 h3{color:var(--brown)}
-
 .check-list{list-style:none}
 .check-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:15px;color:var(--ink);line-height:1.5}
 .check-icon{color:var(--brown);flex-shrink:0;font-size:16px;margin-top:1px;font-weight:700}
-
-/* TESTIMONIALS - dark bg */
 .testimonials{padding:100px 32px;background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
 .testimonials::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(122,92,46,0.08) 0%,transparent 60%);pointer-events:none}
 .testi-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
 @media(max-width:900px){.testi-inner{grid-template-columns:1fr;gap:40px}}
-
 .testi-left h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:900;line-height:1.15;color:var(--cream);margin-bottom:20px}
 .testi-image{width:100%;max-width:400px;aspect-ratio:3/4;background:linear-gradient(135deg,rgba(122,92,46,0.3),rgba(122,92,46,0.05));border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:24px;overflow:hidden;position:relative}
-.testi-image-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,11,10,0.6),transparent 50%)}
-
 .testi-quotes{display:flex;flex-direction:column;gap:32px}
 .testi-quote{padding:28px 0;border-bottom:1px solid var(--border-dark)}
 .testi-quote:last-child{border-bottom:none}
@@ -95,46 +77,32 @@ a{color:inherit;text-decoration:none}
 .testi-avatar img{width:100%;height:100%;object-fit:cover}
 .testi-name{font-size:14px;font-weight:700;color:var(--cream)}
 .testi-role{font-size:12px;color:var(--text2)}
-
-/* STATS BAR */
 .stats-bar{padding:48px 32px;background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .stats-inner{max-width:800px;margin:0 auto;display:flex;justify-content:center;gap:56px;flex-wrap:wrap}
 .stat-item{text-align:center}
 .stat-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;color:var(--brown)}
 .stat-label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--text-sub);margin-top:4px}
-
-/* CTA BOTTOM */
 .cta-bottom{padding:100px 32px;text-align:center;background:var(--cream-bg)}
 .cta-bottom h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:var(--ink);margin-bottom:12px;max-width:600px;margin-left:auto;margin-right:auto}
 .cta-bottom p{font-size:16px;color:var(--text-sub);max-width:420px;margin:0 auto 36px}
-
-/* FOOTER */
 .footer{padding:60px 32px 40px;background:var(--white);border-top:1px solid var(--border)}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:40px}
 @media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;gap:24px}}
 @media(max-width:480px){.footer-inner{grid-template-columns:1fr}}
-
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:16px}
 .footer-brand .logo-icon{width:32px;height:32px}
 .footer-desc{font-size:13px;color:var(--text-sub);line-height:1.6}
-
 .footer-col h4{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
 .footer-col a{display:block;font-size:14px;color:var(--text-sub);padding:4px 0;transition:color .3s}
 .footer-col a:hover{color:var(--brown)}
-
 .footer-newsletter{display:flex;gap:0;margin-top:8px}
 .footer-email{flex:1;padding:10px 14px;border:1px solid var(--border);border-right:none;font-family:'DM Sans',sans-serif;font-size:13px;background:var(--cream-bg);color:var(--ink)}
 .footer-email::placeholder{color:var(--text-sub)}
 .footer-send{padding:10px 16px;background:var(--brown);color:var(--white);border:none;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .3s}
 .footer-send:hover{background:var(--ink)}
-
 .footer-bottom{max-width:1200px;margin:32px auto 0;padding-top:20px;border-top:1px solid var(--border);font-size:12px;color:var(--text-sub);text-align:center}
-
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .reveal.vis{opacity:1;transform:none}
-
-/* FLOAT CTA */
 .float-cta{position:fixed;bottom:20px;right:20px;z-index:100;background:var(--brown);color:var(--white);padding:12px 24px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;box-shadow:0 4px 20px rgba(122,92,46,0.4);transition:all .3s;opacity:0;transform:translateY(16px)}
 .float-cta.show{opacity:1;transform:translateY(0)}
 .float-cta:hover{background:var(--ink)}
@@ -145,28 +113,25 @@ a{color:inherit;text-decoration:none}
 
 <a href="#cta" class="float-cta" id="fc">Đăng ký thử thách</a>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="/cong-dong/" class="logo">
       <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z" stroke="#e7e3dd" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="#e7e3dd" opacity="0.6"/></svg></div>
       <div class="logo-text">Cộng đồng<br><span>AI Video Affiliate</span></div>
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="/cong-dong/" class="active">Trang chủ</a>
       <a href="/cong-dong/bang-xep-hang/">Bảng xếp hạng</a>
       <a href="/cong-dong/cau-chuyen/">Câu chuyện thành công</a>
       <a href="#cta" class="nav-login">Đăng ký</a>
     </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-video reveal">
-      <!-- THAY LINK YOUTUBE Ở ĐÂY: đổi VIDEO_ID thành ID video YouTube -->
-      <!-- Ví dụ: https://www.youtube.com/embed/abc123 -->
       <div class="video-placeholder" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VIDEO_ID?autoplay=1\' allow=\'autoplay;encrypted-media\' allowfullscreen></iframe>'">
         <div class="play-btn">
           <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7L8 5z"/></svg>
@@ -184,7 +149,6 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats-bar reveal">
   <div class="stats-inner">
     <div class="stat-item"><div class="stat-num">1.371</div><div class="stat-label">Video đã tạo</div></div>
@@ -194,7 +158,6 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- BENEFITS -->
 <section class="benefits reveal">
   <div class="benefits-inner">
     <div class="benefits-title">Lợi ích cốt lõi</div>
@@ -231,7 +194,6 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testimonials reveal">
   <div class="testi-inner">
     <div class="testi-left">
@@ -266,7 +228,6 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<!-- CTA BOTTOM -->
 <section class="cta-bottom" id="cta">
   <div class="reveal">
     <h2>Bạn đã sẵn sàng để viết câu chuyện của mình?</h2>
@@ -275,7 +236,6 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div>
@@ -309,13 +269,13 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script>
-// Reveal animation
 const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis') }) }, { threshold: .08 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// Float CTA
 const fc = document.getElementById('fc');
 window.addEventListener('scroll', () => { fc.classList.toggle('show', scrollY > 500) });
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open')}
+function closeMenu(){document.getElementById('navLinks').classList.remove('open');document.getElementById('hamburger').classList.remove('open')}
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',closeMenu));
 </script>
 </body>
 </html>
